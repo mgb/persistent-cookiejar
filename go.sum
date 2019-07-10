@@ -1,5 +1,7 @@
 github.com/frankban/quicktest v0.0.0-20171023143956-9332c2fb618e h1:LN7YRsIDybsmepzdm9hb+Lk++BVqwWZC6jOGSDAdkOs=
 github.com/frankban/quicktest v0.0.0-20171023143956-9332c2fb618e/go.mod h1:1Bb+ZdFimNFekaSbjJw9uAMDBC4SvpBzuk2wc0U1Dqk=
+github.com/go4org/go4 v0.0.0-20190313082347-94abd6928b1d h1:8abl05vPDym3FmkxM59ndh7fTi6XMiSApDE/N0Lzb0o=
+github.com/go4org/go4 v0.0.0-20190313082347-94abd6928b1d/go.mod h1:BLAKVUWoYZ2kTodPmXRcZB5wK1cHTxSfm3pGzLp+dqk=
 github.com/google/go-cmp v0.0.0-20171005193144-7ffe1921f7d7 h1:sGSS0KJDeDcMaftdKeHqDQBXgnlXD2LF61i6nldatJk=
 github.com/google/go-cmp v0.0.0-20171005193144-7ffe1921f7d7/go.mod h1:oXzfMopK8JAjlY9xF4vHSVASa0yLyX7SntLO5aqRK0M=
 github.com/juju/clock v0.0.0-20190205081909-9c5c9712527c h1:3UvYABOQRhJAApj9MdCN+Ydv841ETSoy6xLzdmmr/9A=
@@ -29,6 +31,7 @@ golang.org/x/crypto v0.0.0-20190605123033-f99c8df09eb5/go.mod h1:yigFU9vqHzYiE8U
 golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3 h1:0GoQqolDA55aaLxZyTzK/Y2ePZzZTUrRacwib7cNsYQ=
 golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3/go.mod h1:t9HGtf8HONx5eT2rtn7q6eTqICYqUVnKs3thJo3Qplg=
 golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a/go.mod h1:STP8DvDyc/dI5b8T5hshtkjS+E42TnysNCUPdjciGhY=
+golang.org/x/sys v0.0.0-20190412213103-97732733099d h1:+R4KGOnez64A81RvjARKc4UT5/tI9ujCIVX+P5KiHuI=
 golang.org/x/sys v0.0.0-20190412213103-97732733099d/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
