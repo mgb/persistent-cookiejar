@@ -4,10 +4,10 @@ go 1.12
 
 require (
 	github.com/frankban/quicktest v0.0.0-20171023143956-9332c2fb618e
+	github.com/go4org/go4 v0.0.0-20190313082347-94abd6928b1d
 	github.com/google/go-cmp v0.0.0-20171005193144-7ffe1921f7d7 // indirect
 	github.com/juju/clock v0.0.0-20190205081909-9c5c9712527c // indirect
 	github.com/juju/errors v0.0.0-20190207033735-e65537c515d7 // indirect
-	github.com/juju/go4 v0.0.0-20160222163258-40d72ab9641a
 	github.com/juju/loggo v0.0.0-20190526231331-6e530bcce5d8 // indirect
 	github.com/juju/retry v0.0.0-20180821225755-9058e192b216 // indirect
 	github.com/juju/testing v0.0.0-20190429233213-dfc56b8c09fc // indirect
