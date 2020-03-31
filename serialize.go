@@ -15,7 +15,7 @@ import (
 
 	"gopkg.in/retry.v1"
 
-	filelock "github.com/go4org/go4/lock"
+	filelock "go4.org/lock"
 	"gopkg.in/errgo.v1"
 )
 
