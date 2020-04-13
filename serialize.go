@@ -6,6 +6,7 @@ package cookiejar
 
 import (
 	"encoding/json"
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -16,7 +17,6 @@ import (
 	"gopkg.in/retry.v1"
 
 	filelock "go4.org/lock"
-	"gopkg.in/errgo.v1"
 )
 
 // Save saves the cookies to the persistent cookie file.
@@ -43,12 +43,12 @@ func (j *Jar) MarshalJSON() ([]byte, error) {
 func (j *Jar) save(now time.Time) error {
 	locked, err := lockFile(lockFileName(j.filename))
 	if err != nil {
-		return errgo.Mask(err)
+		return fmt.Errorf("cannot lock cookie file: %w", err)
 	}
 	defer locked.Close()
 	f, err := os.OpenFile(j.filename, os.O_RDWR|os.O_CREATE, 0600)
 	if err != nil {
-		return errgo.Mask(err)
+		return fmt.Errorf("cannot open cookie file: %w", err)
 	}
 	defer f.Close()
 	// TODO optimization: if the file hasn't changed since we
@@ -62,10 +62,10 @@ func (j *Jar) save(now time.Time) error {
 	}
 	j.deleteExpired(now)
 	if err := f.Truncate(0); err != nil {
-		return errgo.Notef(err, "cannot truncate file")
+		return fmt.Errorf("cannot truncate file: %w", err)
 	}
 	if _, err := f.Seek(0, 0); err != nil {
-		return errgo.Mask(err)
+		return fmt.Errorf("cannot seek to beginning of cookie file: %w", err)
 	}
 	return j.writeTo(f)
 }
@@ -81,7 +81,7 @@ func (j *Jar) load() error {
 	}
 	locked, err := lockFile(lockFileName(j.filename))
 	if err != nil {
-		return errgo.Mask(err)
+		return fmt.Errorf("cannot lock cookie file: %w", err)
 	}
 	defer locked.Close()
 	f, err := os.Open(j.filename)
@@ -93,7 +93,7 @@ func (j *Jar) load() error {
 	}
 	defer f.Close()
 	if err := j.mergeFrom(f); err != nil {
-		return errgo.Mask(err)
+		return fmt.Errorf("cannot merge cookie data: %w", err)
 	}
 	return nil
 }
@@ -165,7 +165,7 @@ func lockFile(path string) (io.Closer, error) {
 			return locker, nil
 		}
 		if !a.More() {
-			return nil, errgo.Notef(err, "file locked for too long; giving up")
+			return nil, fmt.Errorf("file locked for too long; giving up: %w", err)
 		}
 	}
 	panic("unreachable")

@@ -1749,7 +1749,7 @@ func TestLoadInvalidJSON(t *testing.T) {
 	if err == nil {
 		t.Fatalf("expected error, got none")
 	}
-	want := "cannot load cookies: unexpected EOF"
+	want := "cannot load cookies: cannot merge cookie data: unexpected EOF"
 	if ok, _ := regexp.MatchString(want, err.Error()); !ok {
 		t.Fatalf("unexpected error message; want %q got %q", want, err.Error())
 	}

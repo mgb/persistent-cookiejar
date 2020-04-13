@@ -17,9 +17,7 @@ require (
 	golang.org/x/crypto v0.0.0-20190605123033-f99c8df09eb5 // indirect
 	golang.org/x/net v0.0.0-20190404232315-eb5bcb51f2a3
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
-	gopkg.in/errgo.v1 v1.0.0-20151007153157-66cb46252b94
 	gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce // indirect
 	gopkg.in/retry.v1 v1.0.0-20161025181430-c09f6b86ba4d
 	gopkg.in/yaml.v2 v2.2.2 // indirect
-	launchpad.net/gocheck v0.0.0-20140225173054-000000000087 // indirect
 )
